@@ -20,11 +20,9 @@
 
 ## VALUED OUTCOME: Innovation
 
-Text here [@test1, @test3].
+Text here [@gengamma-paper, @sdmTMB-paper].
 
 Text here [@test1--@test99].
-
-Blah blah [@sdmTMB-paper].
 
 ## VALUED OUTCOME: Impact
 
@@ -129,7 +127,7 @@ List of publications (\* indicates external peer review, \*\* indicates internal
 
 **List of publications (\* indicates external peer review, \*\* indicates internal review)**
 
-## E1a Recognized scientific journals (citation counts from Google Scholar)
+## E1a. Recognized scientific journals (citation counts from Google Scholar)
 
 *@gengamma-paper 2025 Dunic, J.C., J. Conner, **S.C. Anderson**, J.T. Thorson. The generalized gamma is a flexible distribution that outperforms alternatives when modelling catch rate data. In press at ICES Journal of Marine Science. arXiv preprint: <https://doi.org/10.48550/arXiv.2501.05618>.
 

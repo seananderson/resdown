@@ -29,7 +29,7 @@ pak::pkg_install("seananderson/resdown")
 Copy the Markdown template:
 
 ```r
-file.copy(system.file("dossier.md", package = "resdown"), ".")
+file.copy(system.file("dossier.md", package = "resdown"), ".", overwrite = FALSE)
 ```
 
 Then edit `dossier.md` as desired.
@@ -37,12 +37,52 @@ Then edit `dossier.md` as desired.
 Render the dossier:
 
 ```r
-resdown::render_dossier()
+resdown::render_dossier(output = "dossier.docx")
 ```
 
 ```r
 list.files(pattern = "dossier\\.")
-#> [1] "dossier.docx" "dossier.md"   "dossier.pdf" 
+#> [1] "dossier.docx" "dossier.md"
 ```
 
 Copy the contents of `dossier.docx` into the official `.docx` template.
+
+By default, `resdown::render_dossier()` also renders a PDF that may be helpful
+while writing.
+
+## Syntax
+
+Use regular [Pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown).
+Follow the formatting in `dossier.md` that is copied in the above example.
+resdown adds the following syntax:
+
+Annex subsections that require incrementing a number:
+
+```md
+## B{subsec}. Subsection title
+```
+
+Annex subsections that require incrementing a letter:
+
+```md
+## E1{subsec-letter}. Subsection title
+```
+
+Annex evidence item:
+
+```md
+@mylabel Evidence item or paragraph.
+```
+
+These evidence items can be referenced in the main RES dossier as:
+
+```md
+## VALUED OUTCOME: Innovation
+
+Your text here [@mylabel].
+```
+
+When the document is rendered, the `@mylabel` labels will be replaced with
+appropriately numbered/lettered tags in both the annex and main text:
+
+<img src="screenshots/screenshot.png" width="500px">

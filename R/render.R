@@ -139,7 +139,7 @@ render_processed_dossier <- function(
 #'
 #' @examples
 #' \dontrun{
-#' file.copy(system.file("dossier.md", package = "resdown"), ".")
+#' file.copy(system.file("dossier.md", package = "resdown"), ".", overwrite = FALSE)
 #' render_dossier()
 #' }
 render_dossier <- function(
