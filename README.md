@@ -2,6 +2,10 @@
 
 > Research Scientist (*RES*) dossier + Markdown (*down*) 
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/seananderson/resdown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seananderson/resdown/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 Unofficial Markdown template and R code to produce dossiers for Fisheries and
 Oceans Canada Research Scientists under the Career Progression Management
 Framework.

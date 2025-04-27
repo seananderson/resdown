@@ -1,0 +1,18 @@
+Package: resdown
+Title: Render DFO Research Scientist Dossiers in Markdown with R
+Version: 0.0.0.9000
+Authors@R: 
+    person(c("Sean", "C."), "Anderson", , "sean@seananderson.ca", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9563-1937"))
+Description: Unofficial Markdown template and associated R functions to
+    produce dossiers for Fisheries and Oceans Canada Research Scientists
+    under the Career Progression Management Framework.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    cli,
+    rmarkdown,
+    stringr
