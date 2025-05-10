@@ -1,6 +1,6 @@
 Package: resdown
 Title: Render DFO Research Scientist Dossiers in Markdown with R
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(c("Sean", "C."), "Anderson", , "sean@seananderson.ca", 
            role = c("aut", "cre"),

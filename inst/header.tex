@@ -1,0 +1,53 @@
+% \documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+% \definecolor{niceblue}{HTML}{236899}
+\definecolor{niceblue}{HTML}{0000EE}
+\usepackage{enumitem, hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=niceblue,
+  filecolor=black,
+  urlcolor=niceblue,
+  citecolor=niceblue,
+  linkbordercolor = white
+}
+\widowpenalty10000
+\clubpenalty10000
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage[round]{natbib}
+\usepackage{bibentry}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\usepackage{sectsty}
+\usepackage{xurl} % add URL line breaks
+
+\setcounter{secnumdepth}{0}
+
+% % Linux Libertine:
+%   \usepackage{textcomp}
+% \usepackage[sb]{libertine}
+% \usepackage[varqu,varl]{inconsolata}% sans serif typewriter
+% \usepackage[libertine,bigdelims,vvarbb]{newtxmath} % bb from STIX
+% \usepackage[cal=boondoxo]{mathalfa} % mathcal
+% \useosf % osf for texb, not math
+% % \usepackage[supstfm=libertinesups,%
+%   %   supscaled=1.2,%
+%   %   raised=-.13em]{superiors}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% \bibliographystyle{pubs}
+%
+% one * indicates external and two ** indicates internal peer review
+\newcommand{\exitem}{\refstepcounter{enumi}\item[* \theenumi]}
+\newcommand{\initem}{\refstepcounter{enumi}\item[** \theenumi]}
+
+% pubs.bst is a modification of abbrvnat.bst to make a custom citation style for the dossier
+% \bibliographystyle{cjfas}
+
+\title{}
+\author{}
+\date{} % delete this line to display the current date

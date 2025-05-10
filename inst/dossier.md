@@ -129,15 +129,15 @@ List of publications (\* indicates external peer review, \*\* indicates internal
 
 ## E1a. Recognized scientific journals (citation counts from Google Scholar)
 
-*@gengamma-paper 2025 Dunic, J.C., J. Conner, **S.C. Anderson**, J.T. Thorson. The generalized gamma is a flexible distribution that outperforms alternatives when modelling catch rate data. In press at ICES Journal of Marine Science. arXiv preprint: <https://doi.org/10.48550/arXiv.2501.05618>.
+\*@gengamma-paper 2025 Dunic, J.C., J. Conner, **S.C. Anderson**, J.T. Thorson. The generalized gamma is a flexible distribution that outperforms alternatives when modelling catch rate data. In press at ICES Journal of Marine Science. arXiv preprint: <https://doi.org/10.48550/arXiv.2501.05618>.
 
-*@sdmTMB-paper 2025 **Anderson, S.C.**, E.J. Ward, P.A. English, L.A.K. Barnett, and J.T. Thorson. sdmTMB: an R package for fast, flexible, and user-friendly generalized linear mixed effects models with spatial and spatiotemporal random fields. In press at Journal of Statistical Software. Preprint: bioRxiv 2022.03.24.485545. <https://doi.org/10.1101/2022.03.24.485545>.
+\*@sdmTMB-paper 2025 **Anderson, S.C.**, E.J. Ward, P.A. English, L.A.K. Barnett, and J.T. Thorson. sdmTMB: an R package for fast, flexible, and user-friendly generalized linear mixed effects models with spatial and spatiotemporal random fields. In press at Journal of Statistical Software. Preprint: bioRxiv 2022.03.24.485545. <https://doi.org/10.1101/2022.03.24.485545>.
 
 ## E1b. Reviews
 
 ## E1c. Departmental Reports --- CSAS Research Documents
 
-**@cod-assessment 2023 citation here
+\*\*@cod-assessment 2023 citation here
 
 ## E1c. Departmental Reports –-- CSAS Science Advisory Reports
 
