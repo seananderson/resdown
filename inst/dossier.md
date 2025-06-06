@@ -161,6 +161,14 @@ List of publications (\* indicates external peer review, \*\* indicates internal
 
 ## E2{subsec-letter}. Category title
 
+**Accepted**
+
+@example-assessment Text here
+
+**Declined**
+
+@pcod-assessment Text here
+
 ## E2{subsec-letter}. Second category title
 
 # List E3: PRODUCTIVITY --- REPRESENTATION AND CLIENT SERVICES

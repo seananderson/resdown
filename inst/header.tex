@@ -1,8 +1,8 @@
 % \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage[dvipsnames]{xcolor}
-% \definecolor{niceblue}{HTML}{236899}
-\definecolor{niceblue}{HTML}{0000EE}
+\definecolor{niceblue}{HTML}{236899}
+% \definecolor{niceblue}{HTML}{0000EE}
 \usepackage{enumitem, hyperref}
 \hypersetup{
   colorlinks=true,
@@ -12,6 +12,7 @@
   citecolor=niceblue,
   linkbordercolor = white
 }
+\usepackage[document]{ragged2e}
 \widowpenalty10000
 \clubpenalty10000
 \usepackage{booktabs}
@@ -25,6 +26,10 @@
 
 \setcounter{secnumdepth}{0}
 
+\usepackage[normalem]{ulem} % [normalem] to keep \emph{} working as usual
+
+\newenvironment{normalize}{\leftskip-\leftmargin}{\par}
+
 % % Linux Libertine:
 %   \usepackage{textcomp}
 % \usepackage[sb]{libertine}
@@ -37,7 +42,21 @@
 %   %   raised=-.13em]{superiors}
 
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+
+\setmainfont{LibertinusSerif}[
+   UprightFont = *-Regular,
+   BoldFont = *-Bold,
+   ItalicFont = *-Italic,
+   BoldItalicFont = *-BoldItalic,
+   Extension = .otf]
+% \setmainfont{Times New Roman}
+%
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries}{\thesection}{1em}{}
 
 % \bibliographystyle{pubs}
 %

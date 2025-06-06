@@ -205,6 +205,7 @@ render_processed_dossier <- function(
       f <- paste0(ofile, ".tex")
       fix_tex(f, f)
       system(paste0("latexmk -xelatex ", f))
+      # system(paste0("latexmk ", f))
     } else if (oform == "tex") {
       h <- system.file("header.tex", package = "resdown")
       rmarkdown::render(
