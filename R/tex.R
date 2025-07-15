@@ -52,6 +52,9 @@ fix_tex <- function(input, output) {
   labs <- labs[order(.lines)]
   lines <- .lines[order(.lines)]
 
+  # Track counters for each label prefix to ensure continuity
+  label_counters <- list()
+  
   for (i in seq(1, length(lines))) {
     from <- lines[i]
     to <- if (i == length(lines)) length(x) - 1 else lines[i + 1] - 1
@@ -59,12 +62,28 @@ fix_tex <- function(input, output) {
 
     if (any(grepl("\\item|\\exitem|\\initem", chunk))) { # contains any bullets with labels
       this_label <- labs[i]
+      
+      # Count items in this chunk to update counter
+      item_count <- sum(grepl("\\\\item|\\\\exitem|\\\\initem", chunk))
+      
+      # Get or initialize counter for this label
+      if (is.null(label_counters[[this_label]])) {
+        label_counters[[this_label]] <- 0
+        start_value <- 1
+      } else {
+        start_value <- label_counters[[this_label]] + 1
+      }
+      
+      # Update counter
+      label_counters[[this_label]] <- label_counters[[this_label]] + item_count
+      
       chunk[1] <- c(
         paste0(chunk[1], " ",
           # "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin = *]")
-          "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin=4em,
-  labelwidth=3.5em, align=parleft, labelsep=0.5em]")
+          "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin=3.8em,
+  labelwidth=3.6em, align=parleft, labelsep=0.2em, start=", start_value, "]")
       )
+# system("touch ~/src/dossier/dossier.md")
 
       chunk[length(chunk)] <- c(
         paste0(chunk[length(chunk)], " ", "\\end{enumerate}")
