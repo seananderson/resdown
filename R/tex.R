@@ -80,8 +80,8 @@ fix_tex <- function(input, output) {
       chunk[1] <- c(
         paste0(chunk[1], " ",
           # "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin = *]")
-          "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin=3.8em,
-  labelwidth=3.6em, align=parleft, labelsep=0.2em, start=", start_value, "]")
+          "\n \\begin{enumerate}[label = ", this_label, "-\\arabic*, leftmargin=4.1em,
+  labelwidth=3.9em, align=parleft, labelsep=0.2em, start=", start_value, "]") # leftmargin = labelwidth + labelsep
       )
 # system("touch ~/src/dossier/dossier.md")
 
@@ -115,8 +115,14 @@ fix_tex <- function(input, output) {
   i <- grep("^\\\\begin\\{normalize", out)
   out[i] <- paste0("\\item[]", out[i])
 
-  # \documentclass[
-  # ]{article}
-  #
+  # Set paragraph indentation before \begin{document}
+  # Only indent paragraphs after the first paragraph following a heading
+  i <- grep("^\\\\begin\\{document", out)
+  out <- c(out[1:(i-1)],
+           "\\setlength{\\parindent}{1.7em}",
+           "\\setlength{\\RaggedRightParindent}{1.7em}",
+           "\\setlength{\\parskip}{0pt}",
+           out[i:length(out)])
+
   writeLines(out, output)
 }

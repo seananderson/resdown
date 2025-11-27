@@ -15,6 +15,8 @@
 \usepackage[document]{ragged2e}
 \widowpenalty10000
 \clubpenalty10000
+
+
 \usepackage{booktabs}
 \usepackage{calc}
 \usepackage[round]{natbib}
@@ -23,6 +25,7 @@
 % \useunder{\uline}{\ul}{}
 \usepackage{sectsty}
 \usepackage{xurl} % add URL line breaks
+\usepackage{array}
 
 \setcounter{secnumdepth}{0}
 
@@ -43,13 +46,13 @@
 
 \usepackage{fontspec}
 
-\setmainfont{LibertinusSerif}[
-   UprightFont = *-Regular,
-   BoldFont = *-Bold,
-   ItalicFont = *-Italic,
-   BoldItalicFont = *-BoldItalic,
-   Extension = .otf]
-% \setmainfont{Times New Roman}
+% \setmainfont{LibertinusSerif}[
+%    UprightFont = *-Regular,
+%    BoldFont = *-Bold,
+%    ItalicFont = *-Italic,
+%    BoldItalicFont = *-BoldItalic,
+%    Extension = .otf]
+\setmainfont{Times New Roman}
 %
 \usepackage{titlesec}
 \titleformat{\section}
@@ -57,6 +60,11 @@
 
 \titleformat{\subsection}
   {\normalfont\bfseries}{\thesection}{1em}{}
+
+\titleformat{\paragraph}
+  {\normalfont\bfseries}{\theparagraph}{0em}{}
+\titlespacing*{\paragraph}
+  {0pt}{0.5\baselineskip}{0pt}
 
 % \bibliographystyle{pubs}
 %

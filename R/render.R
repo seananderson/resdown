@@ -198,7 +198,8 @@ render_processed_dossier <- function(
         output_format =
           rmarkdown::latex_document(pandoc_args =
               c("--columns=100000",
-                paste0("--include-in-header=", h)
+                paste0("--include-in-header=", h),
+                "--variable=indent"
               )),
         output_file = ofile
       )
@@ -213,7 +214,8 @@ render_processed_dossier <- function(
         output_format =
           rmarkdown::latex_document(pandoc_args =
               c("--columns=100000",
-            paste0("--include-in-header=", h)
+            paste0("--include-in-header=", h),
+            "--variable=indent"
           )),
         output_file = ofile
       )
